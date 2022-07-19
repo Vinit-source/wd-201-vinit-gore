@@ -40,16 +40,3 @@ library = {
   :austen => ["a", "b"],
 }
 library[:rowling] = ["x"]
-
-# Problem 1
-books = ["Design as Art", "Anathem", "Shogun"]
-authors = ["Bruno Munari", "Neal Stephenson", "James Clavell"]
-
-library = {}
-authors.each.with_index {
-  |a, i|
-  sym = a.split(" ")[0].downcase.to_sym
-  library[sym] = books[i]
-}
-
-puts library
